@@ -20,7 +20,7 @@ func TestLocalTransport_Connect(t *testing.T) {
 	assert.Equal(t, t2.peers[t1.Addr()], t1)
 }
 
-func TestLocalTransport_Consume(t *testing.T) {
+func TestLocalTransport_Consume_and_SendMessage(t *testing.T) {
 	t1 := NewLocalTransport("t1")
 	t2 := NewLocalTransport("t2")
 	assert.Nil(t, t1.Connect(t2))
